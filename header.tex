@@ -1,0 +1,71 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage{graphicx,epsfig}
+% is this package for pseudocode comments?
+\usepackage{comment}
+\usepackage{makeidx}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} %used for \mathbb{N}
+\usepackage{amsthm} % used for Defn
+\usepackage{amssymb}
+
+\usepackage[section]{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\makeindex
+
+% subsections are listed with letters
+\renewcommand\thesubsection{\Alph{subsection}}
+
+\oddsidemargin    0in
+\setlength{\evensidemargin}{0in}
+\textwidth        6.5in
+\topmargin        0.0in
+\textheight       8.5in
+
+% borrowed some ideas from https://github.com/NivenT/latex_header
+
+\theoremstyle{plain}
+% counter resets at section - I think this is also the default behavior
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{prob}{Problem}
+
+\theoremstyle{definition}
+% counter shared with thm
+\newtheorem{defn}[thm]{Definition}
+\newtheorem*{defns}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem{eg}[thm]{Example}
+\newtheorem{notn}[thm]{Notation}
+
+\newcommand{\define}[1]{\textbf{#1}\index{#1}}
+
+% Letters/Font
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+
+% Grouping Operators
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\parens}[1]{\left(#1\right)}
+% note that we defined bracks not brace/braces because brace is already used by amsmath
+\newcommand{\bracks}[1]{\left\{#1\right\}}
+\newcommand{\sqbracks}[1]{\left[#1\right]}
+\newcommand{\clop}[1]{\left[#1\right)}
+\newcommand{\opcl}[1]{\left(#1\right]}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+
+\graphicspath{{.}}
