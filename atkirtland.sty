@@ -1,22 +1,22 @@
-\documentclass[11pt,letterpaper]{article}
+\ProvidesPackage{atkirtland}
+
+\usepackage{amsfonts} %used for \mathbb{N}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} % used for Defn
+
 \usepackage{fullpage}
 \usepackage{graphicx,epsfig}
 % is this package for pseudocode comments?
 \usepackage{comment}
 \usepackage{makeidx}
-
-\usepackage{amsmath}
-\usepackage{amsfonts} %used for \mathbb{N}
-\usepackage{amsthm} % used for Defn
-\usepackage{amssymb}
+\usepackage{hyperref}
 
 \usepackage[section]{algorithm}
 \usepackage{algpseudocode}
 
 \usepackage{tikz}
 \usetikzlibrary{trees}
-
-\makeindex
 
 % subsections are listed with letters
 \renewcommand\thesubsection{\Alph{subsection}}
@@ -32,7 +32,12 @@
 \theoremstyle{plain}
 % counter resets at section - I think this is also the default behavior
 \newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conject}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
 \newtheorem*{prob}{Problem}
+\newtheorem{qn}{Question}
 
 \theoremstyle{definition}
 % counter shared with thm
@@ -40,7 +45,7 @@
 \newtheorem*{defns}{Definition}
 
 \theoremstyle{remark}
-\newtheorem{rem}{Remark}
+\newtheorem{rmk}{Remark}
 \newtheorem{eg}[thm]{Example}
 \newtheorem{notn}[thm]{Notation}
 
@@ -64,8 +69,16 @@
 \newcommand{\sqbracks}[1]{\left[#1\right]}
 \newcommand{\clop}[1]{\left[#1\right)}
 \newcommand{\opcl}[1]{\left(#1\right]}
+\newcommand{\angles}[1]{\angle#1\rangle}
 
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\rowrank}{row rank}
+\DeclareMathOperator{\colrank}{column rank}
 
 \graphicspath{{.}}
+
+\makeindex
+
