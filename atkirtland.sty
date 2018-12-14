@@ -32,22 +32,47 @@
 \theoremstyle{plain}
 % counter resets at section - I think this is also the default behavior
 \newtheorem{thm}{Theorem}[section]
+\newtheorem*{thm*}{Theorem}
+
 \newtheorem{lemma}[thm]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+
 \newtheorem{cor}[thm]{Corollary}
+\newtheorem{corollary}[thm]{Corollary}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{corollary*}{Corollary}
+
 \newtheorem{conject}[thm]{Conjecture}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem*{conject*}{Conjecture}
+\newtheorem*{conjecture*}{Conjecture}
+
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem*{prob}{Problem}
-\newtheorem{qn}{Question}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{proposition*}{Proposition}
+
 
 \theoremstyle{definition}
 % counter shared with thm
 \newtheorem{defn}[thm]{Definition}
-\newtheorem*{defns}{Definition}
+\newtheorem*{defn*}{Definition}
 
 \theoremstyle{remark}
-\newtheorem{rmk}{Remark}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem*{rmk*}{Remark}
 \newtheorem{eg}[thm]{Example}
+\newtheorem*{eg*}{Example}
 \newtheorem{notn}[thm]{Notation}
+\newtheorem*{notn*}{Notation}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{problem}[thm]{Problem}
+\newtheorem*{prob*}{Problem}
+\newtheorem*{problem*}{Problem}
+\newtheorem{qn}[thm]{Question}
+\newtheorem{question}[thm]{Question}
+\newtheorem*{qn*}{Question}
+\newtheorem*{question*}{Question}
 
 \newcommand{\define}[1]{\textbf{#1}\index{#1}}
 
