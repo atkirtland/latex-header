@@ -5,6 +5,9 @@
 \usepackage{amssymb}
 \usepackage{amsthm} % used for Defn
 
+\usepackage{bbm}
+\usepackage{dsfont}
+
 \usepackage{fullpage}
 \usepackage{graphicx,epsfig}
 % is this package for pseudocode comments?
@@ -73,17 +76,42 @@
 \newtheorem{question}[thm]{Question}
 \newtheorem*{qn*}{Question}
 \newtheorem*{question*}{Question}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
 
 \newcommand{\define}[1]{\textbf{#1}\index{#1}}
 
 % Letters/Font
 \DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\bF}{\mathbb{F}}
 \DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bQ}{\mathbb{Q}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\bZ}{\mathbb{Z}}
 \DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\bR}{\mathbb{R}}
 \DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\bC}{\mathbb{C}}
 \DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bE}{\mathbb{E}}
 \DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\bN}{\mathbb{N}}
+\DeclareMathOperator{\M}{\mathbb{M}}
+\DeclareMathOperator{\mM}{\mathbb{M}}
+\DeclareMathOperator{\bH}{\mathbb{H}}
+\DeclareMathOperator{\bP}{\mathbb{P}}
+
+\DeclareMathOperator{\cH}{\mathcal{H}}
+\DeclareMathOperator{\cA}{\mathcal{A}}
+\DeclareMathOperator{\cB}{\mathcal{B}}
+\DeclareMathOperator{\cC}{\mathcal{C}}
+
+\newcommand*\bb[1]{\mathbb{#1}}
+\newcommand*\mc[1]{\mathcal{#1}}
+
+\newcommand{\w}[1]{\wedge#1}
+\newcommand*\mean[1]{\bar{#1}}
+\newcommand*\conj[1]{\bar{#1}}
 
 % Grouping Operators
 \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
@@ -94,14 +122,30 @@
 \newcommand{\sqbracks}[1]{\left[#1\right]}
 \newcommand{\clop}[1]{\left[#1\right)}
 \newcommand{\opcl}[1]{\left(#1\right]}
-\newcommand{\angles}[1]{\angle#1\rangle}
+\newcommand{\angles}[1]{\langle#1\rangle}
 
+% probability
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\Var}{Var}
+% linear algebra
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\nullity}{nullity}
 \DeclareMathOperator{\rowrank}{row rank}
 \DeclareMathOperator{\colrank}{column rank}
+\DeclareMathOperator{\tr}{Tr}
+% abstract algebra
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Inn}{Inn}
+% category theory
+\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\Grp}{Grp}
+\DeclareMathOperator{\Ring}{Ring}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
 
 \graphicspath{{.}}
 
