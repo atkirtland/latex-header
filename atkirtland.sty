@@ -31,26 +31,6 @@
 % for inclusion map xhookrightarrow
 \usepackage{mathtools}
 
-% https://tex.stackexchange.com/questions/73/which-document-class-is-being-used
-% https://tex.stackexchange.com/questions/7453/what-is-the-use-of-percent-signs-at-the-end-of-lines
-% having trouble getting this to work.
-% \makeatletter%
-% \@ifclassloaded{article} {%
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
-\newtheorem{lemma}{Lemma}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\theoremstyle{remark}
-\newtheorem{example}{Example}
-\newtheorem{problem}{Problem}
-% }{%
-% }%
-% \makeatother%
-
-% subsections are listed with letters
-% \renewcommand\thesubsection{\Alph{subsection}}
 
 % borrowed some ideas from https://github.com/NivenT/latex_header
 
@@ -108,6 +88,7 @@
 
 \input{mathjax.tex}
 \input{unicode.tex}
+\input{envs.tex}
 
 % https://tex.stackexchange.com/questions/23102/endinput-what-is-it-for
 \endinput
