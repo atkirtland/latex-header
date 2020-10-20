@@ -1,8 +1,32 @@
 \ProvidesPackage{atkirtland}
 
+% from https://tex.stackexchange.com/questions/195458/implementing-declareunicodecharacter-in-lualatex-an-xelatex
+
+\usepackage{ifxetex,ifluatex}
+
+\newif\ifunicode
+\ifxetex\unicodetrue\fi
+\ifluatex\unicodetrue\fi
+
+\ifunicode
+  \usepackage{fontspec}
+  \usepackage{newunicodechar}
+  \usepackage{xeCJK}
+  \setCJKmainfont{Noto Sans CJK TC}
+  \setCJKmonofont{Noto Sans CJK TC}
+  \newcommand{\DeclareUnicodeCharacter}[2]{%
+    \begingroup\lccode`|=\string"#1\relax
+    \lowercase{\endgroup\newunicodechar{|}}{#2}%
+  }
+\else
+  \usepackage[utf8]{inputenc}
+\fi
+
+% end from
+
+
 \usepackage[letterpaper, margin=1in]{geometry}
 
-\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 
 \usepackage{amsfonts} %used for \mathbb{N}
@@ -40,6 +64,7 @@
 \usepackage{listings}
 \lstset{breaklines=true}
 \usepackage{setspace}
+\doublespacing{}
 
 \usepackage{siunitx}
 \usepackage[version=4]{mhchem}
