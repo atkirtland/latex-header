@@ -43,7 +43,7 @@
 \usepackage{makeidx}
 \usepackage{hyperref}
 
-\usepackage[section]{algorithm}
+\usepackage{algorithm}
 \usepackage{algpseudocode}
 
 \usepackage{tikz}
@@ -59,6 +59,8 @@
 % https://tex.stackexchange.com/questions/60135/path-to-external-files-in-nested-input
 \usepackage{import}
 
+% for importing pdfs. use like \includepdf[pages=-]{name.pdf}
+\usepackage{pdfpages}
 
 % for code
 \usepackage{listings}
@@ -73,49 +75,29 @@
 % borrowed some ideas from https://github.com/NivenT/latex_header
 
 \theoremstyle{plain}
-% counter resets at section - I think this is also the default behavior
-\newtheorem{thm}{Theorem}[section]
-\newtheorem*{thm*}{Theorem}
 % \newtheorem{theorem}{Theorem}
 \newtheorem*{theorem*}{Theorem}
 % \newtheorem{lemma}[thm]{Lemma}
 \newtheorem*{lemma*}{Lemma}
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem*{cor*}{Corollary}
 % \newtheorem{corollary}[thm]{Corollary}
 \newtheorem*{corollary*}{Corollary}
-\newtheorem{conject}[thm]{Conjecture}
-\newtheorem*{conject*}{Conjecture}
-\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{conjecture}{Conjecture}
 \newtheorem*{conjecture*}{Conjecture}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem*{prop*}{Proposition}
-\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{proposition}{Proposition}
 \newtheorem*{proposition*}{Proposition}
 
 \theoremstyle{definition}
 % counter shared with thm
-\newtheorem{defn}[thm]{Definition}
 \newtheorem*{defn*}{Definition}
 
 \theoremstyle{remark}
-\newtheorem{rmk}[thm]{Remark}
 \newtheorem*{rmk*}{Remark}
 \newtheorem{remark}{Remark}
 \newtheorem*{remark*}{Remark}
-\newtheorem{eg}[thm]{Example}
-\newtheorem{eg*}[thm]{Example}
 % \newtheorem{example}[thm]{Example}
-\newtheorem{example*}[thm]{Example}
-\newtheorem{notn}[thm]{Notation}
-\newtheorem*{notn*}{Notation}
-\newtheorem{prob}[thm]{Problem}
-\newtheorem*{prob*}{Problem}
+\newtheorem{example*}{Example}
 % \newtheorem{problem}[thm]{Problem}
 \newtheorem*{problem*}{Problem}
-\newtheorem{qn}[thm]{Question}
-\newtheorem*{qn*}{Question}
-\newtheorem{question}[thm]{Question}
 \newtheorem*{question*}{Question}
 \newtheorem{exercise}{Exercise}
 \newtheorem*{exercise*}{Exercise}
