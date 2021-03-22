@@ -25,7 +25,6 @@
 % end from
 
 
-\usepackage[letterpaper, margin=1in]{geometry}
 
 \usepackage{amssymb}
 
@@ -65,8 +64,6 @@
 % for code
 \usepackage{listings}
 \lstset{breaklines=true}
-\usepackage{setspace}
-\doublespacing{}
 
 \usepackage{siunitx}
 \usepackage[version=4]{mhchem}
@@ -118,7 +115,18 @@
 
 \input{mathjax.tex}
 \input{unicode.tex}
+
+
+% use the packages if not using beamer.
+% the input envs.tex must come after the theoremstyle plain provided above as it defines the thm env.
+\makeatletter
+\@ifclassloaded{beamer}{}{
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing{}
 \input{envs.tex}
+}
+\makeatother
 
 % https://tex.stackexchange.com/questions/23102/endinput-what-is-it-for
 \endinput
