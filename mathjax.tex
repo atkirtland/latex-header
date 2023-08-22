@@ -1,3 +1,12 @@
+\ifdefined\HCode
+  % we are running tex4ht
+  % don't load the physics package
+  \require{physics}
+\else
+  % we are running LaTeX
+%   \usepackage{physics}
+\fi
+
 \newcommand\define[1]{\textbf{#1}\index{#1}}
 
 % Letters/Font
@@ -46,6 +55,7 @@
 \newcommand{\indep}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
 % now included in the physics package
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\DeclareMathOperator{\Bias}{Bias}
 
 % linear algebra
 \DeclareMathOperator{\nullity}{nullity}
@@ -63,7 +73,7 @@
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\Span}{span}
 \DeclareMathOperator{\Int}{int}
-
+\DeclareMathOperator{\adj}{adj}
 
 % abstract algebra
 \DeclareMathOperator{\Aut}{Aut}
@@ -84,6 +94,15 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\im}{im}
+% \DeclareMathOperator{\Vec}{Vec}
+\DeclareMathOperator{\Rel}{Rel}
+\DeclareMathOperator{\Mon}{Mon}
+\DeclareMathOperator{\Pre}{Pre}
+\DeclareMathOperator{\SRel}{SRel}
+\DeclareMathOperator{\Ab}{Ab}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Nat}{Nat}
+\DeclareMathOperator{\Cat}{Cat}
 % now in physics package
 % \DeclareMathOperator{\op}{op}
 
@@ -91,6 +110,7 @@
 \DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Disc}{Disc}
 \DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\lcm}{lcm}
 
 % differential geometry
 \DeclareMathOperator{\Man}{Man}
@@ -113,4 +133,7 @@
 \DeclareMathOperator{\Vol}{Vol}
 \DeclareMathOperator{\essup}{essup}
 \DeclareMathOperator{\essinf}{essinf}
+
+% least fixed point
+\DeclareMathOperator{\lfp}{lfp}
 
