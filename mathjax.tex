@@ -1,10 +1,10 @@
 \ifdefined\HCode
-  % we are running tex4ht
-  % don't load the physics package
-  \require{physics}
+	% we are running tex4ht
+	% don't load the physics package
+	\require{physics}
 \else
-  % we are running LaTeX
-%   \usepackage{physics}
+	% we are running LaTeX
+	%   \usepackage{physics}
 \fi
 
 \newcommand\define[1]{\textbf{#1}\index{#1}}
@@ -47,9 +47,9 @@
 \newcommand{\angles}[1]{\langle#1\rangle}
 
 \newcommand{\p}[1]{\left(#1\right)}
-\newcommand{\b}[1]{\left\{#1\right\}}
+% \newcommand{\b}[1]{\left\{#1\right\}}
 \newcommand{\q}[1]{\left[#1\right]}
-\newcommand{\a}[1]{\left|#1\right|}
+% \newcommand{\a}[1]{\left|#1\right|}
 \newcommand{\n}[1]{\left\lVert#1\right\rVert}
 
 
@@ -147,6 +147,7 @@
 \DeclareMathOperator{\Geometric}{Geometric}
 \DeclareMathOperator{\Poisson}{Poisson}
 \DeclareMathOperator{\Uniform}{Uniform}
+\DeclareMathOperator{\Beta}{Beta}
 \DeclareMathOperator{\TV}{TV}
 \DeclareMathOperator{\io}{i.o.}
 \DeclareMathOperator{\ale}{a.e.}
@@ -159,4 +160,8 @@
 \DeclareMathOperator{\pval}{p.v.}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Pol}{Pol}
 
