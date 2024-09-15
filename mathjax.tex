@@ -2,6 +2,7 @@
 	% we are running tex4ht
 	% don't load the physics package
 	\require{physics}
+	\require{siunitx}
 \else
 	% we are running LaTeX
 	%   \usepackage{physics}
@@ -59,7 +60,8 @@
 \DeclareMathOperator{\Cor}{Cor}
 \DeclareMathOperator{\median}{median}
 % https://tex.stackexchange.com/questions/154530/resolved-a-conditional-independence-symbol-that-looks-good-with-mid
-\newcommand{\indep}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+\newcommand{\ind}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+% or \newcommand{\ind}{\perp\!\!\!\!\perp} 
 % now included in the physics package
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \DeclareMathOperator{\Bias}{Bias}
@@ -164,4 +166,5 @@
 \DeclareMathOperator{\Hol}{Hol}
 \DeclareMathOperator{\cl}{cl}
 \DeclareMathOperator{\Pol}{Pol}
+\DeclareMathOperator{\sinc}{sinc}
 
