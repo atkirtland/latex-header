@@ -9,17 +9,17 @@
 \ifluatex\unicodetrue\fi
 
 \ifunicode
-  \usepackage{fontspec}
-  \usepackage{newunicodechar}
-  \usepackage{xeCJK}
-  \setCJKmainfont{Noto Sans CJK TC}
-  \setCJKmonofont{Noto Sans CJK TC}
-  \newcommand{\DeclareUnicodeCharacter}[2]{%
-    \begingroup\lccode`|=\string"#1\relax
-    \lowercase{\endgroup\newunicodechar{|}}{#2}%
-  }
+	\usepackage{fontspec}
+	\usepackage{newunicodechar}
+	\usepackage{xeCJK}
+	\setCJKmainfont{Noto Sans CJK TC}
+	\setCJKmonofont{Noto Sans CJK TC}
+	\newcommand{\DeclareUnicodeCharacter}[2]{%
+		\begingroup\lccode`|=\string"#1\relax
+		\lowercase{\endgroup\newunicodechar{|}}{#2}%
+	}
 \else
-  \usepackage[utf8]{inputenc}
+	\usepackage[utf8]{inputenc}
 \fi
 
 % end from
@@ -47,7 +47,7 @@
 
 \usepackage{tikz}
 \usepackage{tikz-cd}
-\usetikzlibrary{trees}
+\usetikzlibrary{trees, positioning, calc, shapes, arrows}
 
 \usepackage{young}
 \usepackage{youngtab}
@@ -123,10 +123,10 @@
 % the input envs.tex must come after the theoremstyle plain provided above as it defines the thm env.
 \makeatletter
 \@ifclassloaded{beamer}{}{
-\usepackage[letterpaper, margin=1in]{geometry}
-\usepackage{setspace}
-\doublespacing{}
-\input{envs.tex}
+	\usepackage[letterpaper, margin=1in]{geometry}
+	\usepackage{setspace}
+	\doublespacing{}
+	\input{envs.tex}
 }
 \makeatother
 

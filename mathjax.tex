@@ -2,11 +2,14 @@
 	% we are running tex4ht
 	% don't load the physics package
 	\require{physics}
-	\require{siunitx}
+	% \require{siunitx}
 \else
 	% we are running LaTeX
 	%   \usepackage{physics}
 \fi
+
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
 
 \newcommand\define[1]{\textbf{#1}\index{#1}}
 
@@ -115,6 +118,8 @@
 \DeclareMathOperator{\Cat}{Cat}
 % now in physics package
 % \DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\FinStoch}{FinStoch}
+\DeclareMathOperator{\Stoch}{Stoch}
 
 % number theory
 \DeclareMathOperator{\rad}{rad}
@@ -168,3 +173,6 @@
 \DeclareMathOperator{\Pol}{Pol}
 \DeclareMathOperator{\sinc}{sinc}
 
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Pr}{\mathbb{P}}
+\DeclareMathOperator{\R}{\mathbb{R}}
